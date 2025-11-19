@@ -1,41 +1,33 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    /* Define a largura e altura da tela (d.) */
-    display: flex;
-    justify-content: center; /* Centraliza o container na tela */
-    align-items: center;
-    background-color: #2c3e50; /* Fundo escuro para contraste */
+/* Definindo largura e altura da tela */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* alinhamento horizontal */
+  align-items: center;     /* alinhamento vertical */
+  height: 100vh;           /* altura da tela */
+  width: 100vw;            /* largura da tela */
+  background-color: #f0f0f0;
 }
 
-#screen-container {
-    width: 90vw; /* 90% da largura visível */
-    height: 40vh; /* 40% da altura visível */
-    border: 5px solid #f1c40f; /* Borda para demarcar a "tela" */
-    overflow: hidden; /* **Essencial:** Esconde o texto que sai das bordas */
-    background-color: #ecf0f1;
-    position: relative;
+/* Área do letreiro */
+.container {
+  position: relative;
+  width: 80%;   /* espaço livre em torno do letreiro */
+  height: 100px;
+  overflow: hidden;
+  border: 2px solid #333;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#marquee-container {
-    /* Define o espaço livre em torno do letreiro (e.) */
-    padding: 20px; 
-    height: calc(100% - 40px); /* 100% - (padding superior + inferior) */
-    width: calc(100% - 40px); /* 100% - (padding esquerdo + direito) */
-    display: flex;
-    align-items: center; /* Centraliza verticalmente o texto dentro do padding */
-}
-
-#motivational-text {
-    /* Define o alinhamento do texto em torno do letreiro (f.) */
-    font-size: 3em; 
-    font-weight: bold;
-    color: #e74c3c;
-    white-space: nowrap; /* **Essencial:** Impede que o texto quebre a linha */
-    text-align: left; /* O alinhamento do texto é 'left' */
-    position: absolute; /* Permite o movimento via JS */
-    /* Inicia o texto fora da tela, à esquerda, para o movimento 'esquerda para a direita' */
-    left: -100%; 
+/* Texto do letreiro */
+.letreiro {
+  position: absolute;
+  font-size: 2em;
+  font-weight: bold;
+  color: #0077cc;
+  white-space: nowrap;
 }
