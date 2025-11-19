@@ -19,12 +19,12 @@ body {
 }
 
 .letreiro {
-  position: absolute;
-  top: 50%;                /* centraliza verticalmente */
+  position: absolute;        /* IMPORTANTE para o movimento horizontal */
+  top: 50%;                  /* centraliza verticalmente */
   transform: translateY(-50%);
   font-size: 2em;
   font-weight: bold;
   color: #0077cc;
   white-space: nowrap;
-  left: 0;                 /* começa na esquerda */
+  left: 0;                   /* começa na esquerda */
 }
